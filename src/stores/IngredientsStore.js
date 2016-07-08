@@ -6,6 +6,14 @@ var IngredientsStore = Reflux.createStore({
 
     listenables: [IngredientsActions],
 
+    /**
+     * longhand
+     */
+    //init : function(){
+    //    this.listenTo(IngredientsActions.getIngredients, this.getIngredients());
+    //    this.listenTo(IngredientsActions.addIngredient, this.addIngredient());
+    //},
+
     getIngredients : function(){
         HttpService.get("/ingredients").then(function(data) {
             this.ingredients = data;
