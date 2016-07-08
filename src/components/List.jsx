@@ -6,14 +6,19 @@ var ListItem = require('./ListItem.jsx');
 
 var List = React.createClass({
 
+    //mixins:[Reflux.listenTo(IngredientsStore, 'handleChange')],
+
     getInitialState : function(){
         return {'ingredients' : []};
     },
 
     componentDidMount : function(){
-        //Reflux.listenTo(IngredientsStore, 'onChange');
-        IngredientsStore.listen(this.handleChange);
+        this.unsubscribe = IngredientsStore.listen(this.handleChange);
         IngredientsActions.getIngredients();
+    },
+
+    componentWillUnmount : function(){
+        this.unsubscribe();
     },
 
     handleChange : function(event, data){
