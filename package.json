@@ -1,0 +1,33 @@
+{
+  "name": "react-http-flux",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "watchify src/main.jsx -v -t [ babelify --presets [ react ] ] -o public/js/main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "lance fallon",
+  "license": "ISC",
+  "dependencies": {
+    "babel-cli": "^6.10.1",
+    "babel-preset-react": "^6.11.1",
+    "babelify": "^7.3.0",
+    "browserify": "^13.0.1",
+    "flux": "^2.1.1",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-connect": "^4.1.0",
+    "gulp-eslint": "^3.0.1",
+    "gulp-open": "^2.0.0",
+    "history": "^1.13.1",
+    "react": "^15.2.0",
+    "react-dom": "^15.2.0",
+    "react-router": "^2.5.2",
+    "reactify": "^1.1.1",
+    "reflux": "^0.4.1",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.7.0",
+    "whatwg-fetch": "^1.0.0"
+  }
+}
