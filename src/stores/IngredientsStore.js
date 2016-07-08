@@ -7,7 +7,9 @@ var IngredientsStore = Reflux.createStore({
     listenables: [IngredientsActions],
 
     /**
-     * longhand
+     * longhand version that explicitly sets up listener.
+     * The shorthand version above, automatically sets up the store to listen on the given Actions object.
+     * The callbacks are by defaul the name of the action
      */
     //init : function(){
     //    this.listenTo(IngredientsActions.getIngredients, this.getIngredients());
