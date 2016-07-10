@@ -8,10 +8,10 @@ IngredientsActions.getIngredients.preEmit = function(){
 };
 
 IngredientsActions.addIngredient.shouldEmit = function(ingredient){
-    if(ingredient.text === 'Hold the phone!'){
-        console.log('yup, it says "hold the phone", so we will continue');
+    if(ingredient.text.length > 10){
+        console.log('the new ingredient is longer than 10 characters.... hmmmmmm');
     }
-    return ingredient.text === 'Hold the phone!';
+    return true;
 };
 
 IngredientsActions.addIngredient.preEmit = function(){
